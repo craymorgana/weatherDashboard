@@ -26,7 +26,9 @@ function getLocation(){
         console.log('data :>> ', location);
         lat = location[0].lat;
         lon = location[0].lon;
+        getWeather(lat, lon);
     })
+
 }
 
 
@@ -55,7 +57,7 @@ function getWeather(){
 function weatherSearch(event){
     event.preventDefault();
     getLocation();
-    getWeather(lat, lon);
+
 }
 
 searchButton.addEventListener('click', weatherSearch);
