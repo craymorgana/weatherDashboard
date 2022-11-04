@@ -10,7 +10,7 @@ var humidity = 0;
 var weatherIconId = "";
 
 function getLocation(){
-    var locationAPI = `http://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value},840&limit=1&appid=${apiKey}`;
+    var locationAPI = `https://api.openweathermap.org/geo/1.0/direct?q=${searchInput.value},840&limit=1&appid=${apiKey}`;
     
     fetch(locationAPI)
     .then(function(response){
@@ -28,7 +28,7 @@ function getLocation(){
 function getWeather(lat, lon){
 
 
-    var weatherCallApi = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    var weatherCallApi = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     fetch(weatherCallApi)
     .then(function(response){
         return response.json()
